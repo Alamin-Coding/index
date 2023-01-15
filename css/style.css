@@ -23,7 +23,58 @@ img {
 
 .image_box {
     position: relative;
+    overflow: hidden;
 }
+.image_box .label{
+    width: 40px;
+    height: 40px;
+    background: red;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.image_box .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.image_box .icons a{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px dotted brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100px);
+}
+.image_box .icons a:nth-child(1){
+  transition: all linear 0.1s;
+}
+.image_box .icons a:nth-child(2){
+  transition: all linear 0.2s;
+}
+.image_box .icons a:nth-child(3){
+  transition: all linear 0.3s;
+}
+.image_box .icons a:nth-child(4){
+  transition: all linear 0.4s;
+}
+.image_box:hover .icons a{
+  transform: translateX(0px);
+}
+
+
 .image_box .display {
 }
 .image_box .display img{
@@ -62,6 +113,8 @@ img {
 }
 .top_collection_item{
     display: block;
+    margin: 0 12px;
+    /* background: red; */
 }
 .top_collection_item .text_box {
 }
@@ -99,11 +152,14 @@ img {
   cursor: pointer;
 }
 .top_collection_item .text_box .colors span.red {
-  background: red;
+  background: #4C4B2C;
 }
 .top_collection_item .text_box .colors span.green {
-  background: green;
+  background: #D48F2C;
 }
 .top_collection_item .text_box .colors span.blue {
-  background: blue;
+  background: #D0CDD4;
+}
+.top_collection_item .text_box .colors span.active{
+  border: 1px solid red;
 }

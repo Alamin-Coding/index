@@ -1,60 +1,5 @@
-// let thambnailAll = document.querySelectorAll(".thambnail ul li");
 
-
-// thambnailAll.forEach((thambnail) => {
-//         thambnail.addEventListener("mouseenter", ()=> {
-//             thambnail.parentElement.parentElement.parentElement.classList.add("alalalla")
-//         })
-//         thambnail.addEventListener("mouseleave", ()=> {
-//             thambnail.parentElement.parentElement.parentElement.classList.remove("alalalla")
-//         })
-// })
-        
-    // let top_collection_itemAll = document.querySelectorAll(".top_collection_item");
-    // let top_collection_itemArr = Array.from(top_collection_itemAll);
-
-    // top_collection_itemArr.map(element => {
-    //     element.addEventListener("mouseenter", ()=> {
-    //         //save big images
-    //     var $bigItem = $('.display img');
-    //     //save small images
-    //         var $smallItem = $('.thambnail ul li');
-    //     //save color circles
-    //         var $color = $('.colors span');
-    //     //click and moseenter function on small image
-    //     //you could delete one eventlistener
-    //     $smallItem.on('click mouseenter', function () {
-    //       //remove active class from all items
-    //         $bigItem.removeClass('active');
-    //         $smallItem.removeClass('active');
-    //       //add active class to item as small item's index
-    //         $bigItem.eq($(this).index()).addClass('active');
-    //         $smallItem.eq($(this).index()).addClass('active');
-    //         console.log($bigItem.eq($(this).index()));
-    //     });
-  
-    //     $color.on('click', function () {
-    //       //remove active class from all items
-    //         $bigItem.removeClass('active');
-    //         $smallItem.removeClass('active');
-    //       //add active class to item as small item's index
-    //         $bigItem.eq($(this).index()).addClass('active');
-    //         $smallItem.eq($(this).index()).addClass('active');
-    //     });
-    //     })
-    // });
-
-// ========================
 $(document).ready(function () {
-    // Slider start
-    $("product_slider").slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-    })
-    // Slider end
-  
     var $bigItem_1 = $('.top_collection_item-1 .display img'); //save big images
     var $smallItem_1 = $('.top_collection_item-1 .thambnail ul li');//save small images
     
@@ -85,18 +30,23 @@ $(document).ready(function () {
         //remove active class from all items
           $bigItem_1.removeClass('active');
           $smallItem_1.removeClass('active');
+          $color_1.removeClass('active');
         //add active class to item as small item's index
           $bigItem_1.eq($(this).index()).addClass('active');
           $smallItem_1.eq($(this).index()).addClass('active');
+          $color_1.eq($(this).index()).addClass('active');
+          console.log($color_1.eq($(this).index()));
       });
 
       $color_1.on('click', function () {
         //remove active class from all items
           $bigItem_1.removeClass('active');
           $smallItem_1.removeClass('active');
+          $color_1.removeClass('active');
         //add active class to item as small item's index
           $bigItem_1.eq($(this).index()).addClass('active');
           $smallItem_1.eq($(this).index()).addClass('active');
+          $color_1.eq($(this).index()).addClass('active');
       });
       // ====================  Item 01 end  ========================//
   
@@ -185,3 +135,22 @@ $(document).ready(function () {
       // ====================  Item 05 end  ========================//
     
    });
+
+// // Pure Javascript
+//    let thumbnail = document.querySelectorAll(".thumbnail button");
+//  let display = document.querySelectorAll(".display .img");
+//  const displayArray = Array.from(display);
+
+
+//  thumbnail.forEach((item, index)=> {
+//     let number = index
+//     item.addEventListener("mouseenter", ()=> {
+//         let parentDiv = displayArray[index].parentElement;
+//         let childDivs = parentDiv.querySelectorAll(".img");
+//         let childDivArray = Array.from(childDivs);
+//         childDivArray.map((img) => {
+//             img.classList.remove("active");
+//             displayArray[index].classList.add("active")
+//         })
+//     })
+//  })
