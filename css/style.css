@@ -113,8 +113,7 @@ img {
 }
 .top_collection_item{
     display: block;
-    margin: 0 12px;
-    /* background: red; */
+    margin: 0 15px;
 }
 .top_collection_item .text_box {
 }
@@ -151,13 +150,13 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
-.top_collection_item .text_box .colors span.red {
+.top_collection_item .text_box .colors span:nth-child(1){
   background: #4C4B2C;
 }
-.top_collection_item .text_box .colors span.green {
+.top_collection_item .text_box .colors span:nth-child(2) {
   background: #D48F2C;
 }
-.top_collection_item .text_box .colors span.blue {
+.top_collection_item .text_box .colors span:nth-child(3) {
   background: #D0CDD4;
 }
 .top_collection_item .text_box .colors span.active{
